@@ -1,7 +1,8 @@
 /*
 1) DONE- return array of letters whose buttons have been clicked 
-2) when answer button is clicked move onto next question
+2) DONE- when answer button is clicked move onto next question
 3) DONE- restart empties the genreArray array
+4) prev function returns to previous page
 */
 
 
@@ -43,7 +44,6 @@ let questions = [
             {option: "D", answer:D},
             {option: "A", answer:A},
             {option: "B", answer:B}
-
         ]
     }
 ]
@@ -58,11 +58,11 @@ submitBtn.addEventListener('click', submit);
 
 function startQuiz() {
     currentQuestion = 0;
-    questionText.innerHTML = questions[0].question;
+    questionText.innerHTML = questions[currentQuestion].question;
     // First button:
-    A.innerHTML = questions[0].answers[0].option;
+    A.innerHTML = questions[currentQuestion].answers[0].option;
     A.onclick = () => {
-        if (questions[0].answers[0].answer === 'A') {
+        if (questions[currentQuestion].answers[0].answer === 'A') {
             console.log('A'); // when A is clicked, the console displays A
            genreArray.push('A'); // when A is clicked, 'A' is added to genreArray (this adds as many 'A's as the num of times the button is clicked)
         }
@@ -70,39 +70,40 @@ function startQuiz() {
             next();
         }
     }
-    
     // Second button:
-    B.innerHTML = questions[0].answers[1].option;
+    B.innerHTML = questions[currentQuestion].answers[1].option;
     B.onclick = () => {
-        if (questions[0].answers[1].answer === B) {
+        if (questions[currentQuestion].answers[1].answer === B) {
             console.log('B'); 
            genreArray.push('B'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
     }
+    }
+    
     // Third button:
-    C.innerHTML = questions[0].answers[2].option;
+    C.innerHTML = questions[currentQuestion].answers[2].option;
     C.onclick = () => {
-        if (questions[0].answers[2].answer) {
+        if (questions[currentQuestion].answers[2].answer) {
             console.log('C'); 
            genreArray.push('C'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
     }
+    }
+    
     // Fourth button:
-    D.innerHTML = questions[0].answers[3].option;
+    D.innerHTML = questions[currentQuestion].answers[3].option;
     D.onclick = () => {
-        if (questions[0].answers[3].answer) {
+        if (questions[currentQuestion].answers[3].answer) {
             console.log('D'); 
            genreArray.push('D'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
+    }
     }
     previousBtn.classList.add('hide');
  }
@@ -128,51 +129,53 @@ function restart() {
 // based on option the user selects, the genreArray will be added to
 
 function next() {
-    currentQuestion++;
+    currentQuestion++; // maybe delete this?
     if (currentQuestion >= 9) {
         nextBtn.classList.add('hide');
         previousBtn.classList.remove('hide');
     }
-    questionText.innerHTML = questions[0].question;
-    A.innerHTML = questions[0].answers[0].option;
+    questionText.innerHTML = questions[currentQuestion].question;
+    A.innerHTML = questions[currentQuestion].answers[0].option;
     A.onclick = () => {
-        if (questions[0].answers[0].answer) {
+        if (questions[currentQuestion].answers[0].answer) {
             console.log('A'); 
            genreArray.push('A'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
     }
-    B.innerHTML = questions[0].answers[1].option;
+    }
+    
+    B.innerHTML = questions[currentQuestion].answers[1].option;
     B.onclick = () => {
-        if (questions[0].answers[1].answer) {
+        if (questions[currentQuestion].answers[1].answer) {
             console.log('B'); 
            genreArray.push('B'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
     }
-    C.innerHTML = questions[0].answers[2].option;
+    }
+    C.innerHTML = questions[currentQuestion].answers[2].option;
     C.onclick = () => {
-        if (questions[0].answers[2].answer) {
+        if (questions[currentQuestion].answers[2].answer) {
             console.log('C'); 
            genreArray.push('C'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
     }
-    D.innerHTML = questions[0].answers[3].option;
+    }
+    
+    D.innerHTML = questions[currentQuestion].answers[3].option;
     D.onclick = () => {
-        if (questions[0].answers[3].answer) {
+        if (questions[currentQuestion].answers[3].answer) {
             console.log('D'); 
            genreArray.push('D'); 
         }
-    }
-    if (currentQuestion < 9) {
+        if (currentQuestion < 9) {
         next();
+    }
     }
     previousBtn.classList.remove('hide');
 }
@@ -192,10 +195,11 @@ function prev() {
             console.log('A'); 
             genreArray.push('A'); 
          }
-     }
-     if (currentQuestion < 9) {
+         if (currentQuestion < 9) {
          next();
      }
+     }
+     
      // button 2
      B.innerHTML = questions[currentQuestion].answers[1].option;
      B.onclick = () => {
@@ -203,29 +207,31 @@ function prev() {
             console.log('B'); 
             genreArray.push('B'); 
          }
-     }
-     if (currentQuestion < 9) {
+         if (currentQuestion < 9) {
          next();
      }
+     }
+     
      C.innerHTML = questions[currentQuestion].answers[2].option;
      C.onclick = () => {
-        if (question[currentQuestion].answers[2].answer) {
+        if (questions[currentQuestion].answers[2].answer) {
             console.log('C'); 
             genreArray.push('C'); 
          }
-     }
-     if (currentQuestion < 9) {
+         if (currentQuestion < 9) {
          next();
      }
+     }
+     
      D.innerHTML = questions[currentQuestion].answers[3].option;
      D.onclick = () => {
-        if (question[currentQuestion].answers[3].answer) {
+        if (questions[currentQuestion].answers[3].answer) {
             console.log('D'); 
             genreArray.push('D'); 
          }
-     }
-     if (currentQuestion < 9) {
+         if (currentQuestion < 9) {
          next();
+     }
      }
      nextBtn.classList.remove('hide');
         }
