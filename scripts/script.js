@@ -2,7 +2,8 @@
 1) DONE- return array of letters whose buttons have been clicked 
 2) DONE- when answer button is clicked move onto next question
 3) DONE- restart empties the genreArray array
-4) prev function returns to previous page
+4) DONE- prev function returns to previous page
+4i) prev function removes last option selected so user can't select A, click previous, and click B- this currently would result in genreArray = ['A', 'B']
 */
 
 
@@ -62,7 +63,7 @@ function startQuiz() {
     // First button:
     A.innerHTML = questions[currentQuestion].answers[0].option;
     A.onclick = () => {
-        if (questions[currentQuestion].answers[0].answer === 'A') {
+        if (questions[currentQuestion].answers[0].answer) {
             console.log('A'); // when A is clicked, the console displays A
            genreArray.push('A'); // when A is clicked, 'A' is added to genreArray (this adds as many 'A's as the num of times the button is clicked)
         }
@@ -73,7 +74,7 @@ function startQuiz() {
     // Second button:
     B.innerHTML = questions[currentQuestion].answers[1].option;
     B.onclick = () => {
-        if (questions[currentQuestion].answers[1].answer === B) {
+        if (questions[currentQuestion].answers[1].answer) {
             console.log('B'); 
            genreArray.push('B'); 
         }
@@ -181,7 +182,9 @@ function next() {
 }
 
 // create previous() jump to prev Q, currentQuestion will be --, hidden class removed from next button
-function prev() {
+
+
+function previous() {
     currentQuestion--;
     if (currentQuestion <= 0) {
         previousBtn.classList.add('hide');
@@ -235,4 +238,5 @@ function prev() {
      }
      nextBtn.classList.remove('hide');
         }
+
 
