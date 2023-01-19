@@ -17,6 +17,7 @@ const B = document.getElementById('B');
 const C = document.getElementById('C');
 const D = document.getElementById('D');
 const questionText = document.getElementById("question-text");
+const nonFictionImg = document.createElement("img");
 
 /* Genres:
 A- Non-Fiction
@@ -311,4 +312,54 @@ function previous() {
      nextBtn.classList.remove('hide');
         }
 
+        function submit() {
+            previousBtn.classList.add('hide');
+            nextBtn.classList.add('hide');
+            submitBtn.classList.add('hide');
+            A.classList.add('hide');
+            B.classList.add('hide');
+            C.classList.add('hide');
+            D.classList.add('hide');
+           // questionText.innerHTML = mostFrequent(genreArray); // chosenGenre displays undefined, mostFrequent(genreArray) shows correct letter on screen
+           displayGenre();
+        }
+
+        function mostFrequent(genreArray) {
+        let maxCount = 0;
+        let mostCommon;
+
+        for (let i = 0; i < genreArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < genreArray.length; j++) {
+                if (genreArray[i] === genreArray[j]) 
+                count++;
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mostCommon = genreArray[i];
+            }
+        }
+        return mostCommon;
+        }
+       // mostFrequent(genreArray); // printed C (most frequent) when simulated on browser
+
+       function displayGenre() {
+        if (mostFrequent(genreArray) === 'A') {
+            questionText.innerHTML = 'Non-Fiction';
+        } else if (mostFrequent(genreArray) === 'B') {
+            questionText.innerHTML = horrorText;
+            nonFictionImg.src = "assets/images/book-background.jpg"
+            document.body.appendChild(nonFictionImg);
+        } else if (mostFrequent(genreArray) === 'C') {
+            questionText.innerHTML = 'Classics';
+        } else if (mostFrequent(genreArray) === 'D') {
+            questionText.innerHTML = 'Modern Fiction';
+        }
+        }
+
+        let horrorText = "We recommend the following books..."
+        nonFictionImg.classList.add('nf-img')
+       // let horrorImg = nonFictionImg.classList.remove('hide');
+      
+        
 

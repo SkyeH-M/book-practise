@@ -68,6 +68,13 @@ body {
     display: none;
 }
 
+.nf-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
 #question-text {
     font-size: 1.2rem;
     padding-bottom: 20px;
