@@ -39,12 +39,84 @@ let questions = [
         ]
     },
     {
+        question: "Which of the following appeals most to you?",
+        answers: [
+            {option: "I want to learn something", answer:A},
+            {option: "I want to be intrigued", answer:B},
+            {option: "I want to be transported to another time", answer:C},
+            {option: "I want something that relates to my life", answer:D}
+        ]
+    },
+    {
+        question: "Which of the following would be a good day out?",
+        answers: [
+            {option: "Visiting a museum or gallery", answer:A},
+            {option: "Exploring a haunted house", answer:B},
+            {option: "Visiting a National Trust site", answer:C},
+            {option: "Watching something new at the cinema", answer:D}
+        ]
+    },
+    {
+        question: "Pick a quote you like...",
+        answers: [
+            {option: "Deviant men have been constructed as criminal, while deviant women have been constructed as insane.", answer:A},
+            {option: "What is worse: being locked outside of your own mind, or being locked inside of if?", answer:B},
+            {option: "I do not think, therefore I am a moustache", answer:C},
+            {option: "Wasn’t friendship its own miracle, the finding of another person who made the entire lonely world seem somehow less lonely?", answer:D}
+        ]
+    },
+    {
+        question: "You're buying a book for a friend, what do you choose?",
+        answers: [
+            {option: "A book that explores an interest of theirs", answer:A},
+            {option: "A great mystery to unravel", answer:B},
+            {option: "A classic, they're classics for a reason!", answer:C},
+            {option: "A book that inspired their favourite new TV show/film", answer:D}
+        ]
+    },
+    {
+        question: "Which of these authors do you prefer?",
+        answers: [
+            {option: "Gabor Maté", answer:A},
+            {option: "Stephen King", answer:B},
+            {option: "Virginia Woolf", answer:C},
+            {option: "Sally Rooney", answer:D}
+        ]
+    },
+    {
+        question: "Pick a drink",
+        answers: [
+            {option: "Water", answer:A},
+            {option: "Whiskey", answer:B},
+            {option: "Tea", answer:C},
+            {option: "Cocktail", answer:D}
+        ]
+    },
+    {
+        question: "Imagine you're on holiday, what activity would you do?",
+        answers: [
+            {option: "Check our local heritage sites", answer:A},
+            {option: "Do an extreme sport or activity", answer:B},
+            {option: "Visit somewhere that everyone recommends", answer:C},
+            {option: "Chill on the beach or by the pool", answer:D}
+        ]
+    },
+    {
+        question: "Choose a book you've loved in the past",
+        answers: [
+            {option: "Women, Race & Class- Angela Davis", answer:A},
+            {option: "We Need to Talk About Kevin- Lionel Shriver", answer:B},
+            {option: "The Metamorphosis- Franz Kafka", answer:C},
+            {option: "Normal People- Sally Rooney", answer:D}
+        ]
+    },
+    {
         question: "Hello",
         answers: [
-            {option: "C", answer:C},
-            {option: "D", answer:D},
-            {option: "A", answer:A},
-            {option: "B", answer:B}
+            {option: "C", answer:A},
+            {option: "D", answer:B},
+            {option: "A", answer:C},
+            {option: "B", answer:D}
         ]
     }
 ]

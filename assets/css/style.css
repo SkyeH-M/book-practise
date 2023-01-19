@@ -54,6 +54,11 @@ body {
    /* order: 3;  what does this property do ? */
 }
 
+.btn-option {
+    display: block;
+    width: 500px;
+}
+
 .controls {
     padding: 10px;
    /* order: 4; */
@@ -62,3 +67,61 @@ body {
 .hide {
     display: none;
 }
+
+#question-text {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 375px) {
+    #question-text {
+        font-size: 0.8rem;
+    }
+
+    .btn {
+        font-size: 0.7rem;
+        margin: 2px;
+    }
+
+    #question-text {
+        padding: 10px;
+        margin: 10px;
+
+    }
+    .controls {
+        padding: 10px;
+    }
+
+    .btn-option {
+        width: 230px !important; /* FIX THIS */ 
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .btn {
+        font-size: 0.6rem;
+    }
+    .controls {
+        padding: 0;
+    }
+    #question-text {
+        padding: 10px;
+        font-size: 0.6rem;
+    }
+    .btn-option {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .btn-option {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .btn-option {
+        width: 200px !important;
+    }
+}
+
