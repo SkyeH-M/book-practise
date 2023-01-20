@@ -23,6 +23,8 @@ body {
 h1 {
     color: white;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -86,14 +88,20 @@ h1 {
 }
 
 #question-text {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding-bottom: 20px;
 }
 
 footer {
     display: flex;
     width: 100%;
-    
+    text-align: center;
+    margin: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: absolute;
 }
 
 footer ul {
@@ -168,6 +176,9 @@ footer ul {
     .container {
         height: 50vh;
     }
+    body h1 {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -177,16 +188,63 @@ footer ul {
 }
 
 @media screen and (max-width: 615px) {
-    .btn-option {
-        width: 200px !important;
+    body .btn-option {
+        width: 300px !important;
     }
     h1 {
-        font-size: 1.7rem;
+        font-size: 1.3rem !important;
     }
+    .btn {
+        font-size: 0.7rem !important;
+    }
+    body #question-text {
+        font-size: 1rem !important;
+    }
+    .container {
+        height: 75vh !important;
+    }
+    .controls {
+        padding-top: 0;
+    }
+
 }
 
 @media screen and (max-width: 850px) {
     .btn-option {
         width: 350px;
+    }
+    #question-text {
+        padding: 10px;
+        font-size: 1.2rem !important;
+    }
+    .container {
+        height: 75vh;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .btn {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #question-text {
+        font-size: 1.3rem;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 1.4rem;
+    }
+    .btn {
+        font-size: 0.9rem;
+    }
+    .container {
+        height: 70vh;
+    }
+    .controls {
+        margin-bottom: 10px;
     }
 }
