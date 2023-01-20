@@ -15,11 +15,21 @@ body {
     justify-content: center;
 }
 
+.title {
+    margin-bottom: 30px;
+    background-color: rgb(106, 90, 90);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
 .container {
     width: 80vw;
     max-width: 80%;
     background-color: rgb(106, 90, 90);
-    height: 70vh;
+    height: 60vh;
     box-shadow: 0 0 5px 4px;
     display: flex;
     flex-direction: column;
@@ -80,6 +90,40 @@ body {
     padding-bottom: 20px;
 }
 
+footer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+footer ul {
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media {
+    margin-bottom: 0;
+    text-align: center;
+    
+}
+
+.social-media li {
+    display: inline-block; 
+    text-align: center;
+   
+}
+
+.social-media i {
+    font-size: 2rem;
+    color: black;
+    padding: 20px;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 375px) {
     #question-text {
         font-size: 0.8rem;
@@ -102,6 +146,9 @@ body {
     .btn-option {
         width: 230px !important; /* FIX THIS */ 
     }
+    body h1 {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 280px) {
@@ -118,6 +165,9 @@ body {
     .btn-option {
         width: 100px;
     }
+    .container {
+        height: 50vh;
+    }
 }
 
 @media screen and (max-width: 720px) {
@@ -130,5 +180,13 @@ body {
     .btn-option {
         width: 200px !important;
     }
+    h1 {
+        font-size: 1.7rem;
+    }
 }
 
+@media screen and (max-width: 850px) {
+    .btn-option {
+        width: 350px;
+    }
+}
