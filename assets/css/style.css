@@ -40,7 +40,7 @@ h1 {
     text-align: center;
 }
 
-.content {
+.all {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,6 +69,10 @@ h1 {
 .btn-option {
     display: block;
     width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
 }
 
 .controls {
@@ -133,29 +137,47 @@ footer ul {
 }
 
 @media screen and (max-width: 375px) {
-    #question-text {
-        font-size: 0.8rem;
-    }
-
-    .btn {
-        font-size: 0.7rem;
-        margin: 2px;
-    }
-
-    #question-text {
+   body .all #question-text {
+        font-size: 0.8rem !important;
         padding: 10px;
         margin: 10px;
-
+    }
+    .all .btn {
+        font-size: 0.7rem !important;
+        margin: 2px;
     }
     .controls {
         padding: 10px;
+        font-size: 0.7rem;
     }
 
-    .btn-option {
-        width: 230px !important; /* FIX THIS */ 
+    #restart {
+        padding: 7px;
     }
-    body h1 {
-        font-size: 1.5rem;
+
+    #next {
+        padding: 7px;
+    }
+
+    #previous {
+        padding: 7px;
+    }
+    #submit {
+        padding: 7px;
+    }
+
+     .all .btn-option {
+        width: 200px !important; /* FIX THIS */ 
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
+    body .title h1 {
+        font-size: 1rem !important;
+    }
+    .container {
+        width: 375px;
+
     }
 }
 
