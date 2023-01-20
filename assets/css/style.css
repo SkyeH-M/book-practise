@@ -63,7 +63,6 @@ h1 {
 
 .options {
     padding: 10px;
-   /* order: 3;  what does this property do ? */
 }
 
 .btn-option {
@@ -72,12 +71,16 @@ h1 {
     display: flex;
     justify-content: center;
     margin: auto;
-
+    padding: 10px;
+    border-radius: 12px;
 }
 
 .controls {
     padding: 10px;
-   /* order: 4; */
+}
+
+.controls .btn {
+    border-radius: 12px;
 }
 
 .hide {
@@ -196,10 +199,24 @@ footer ul {
         width: 100px;
     }
     .container {
-        height: 50vh;
+        width: 280px;
     }
     body h1 {
         font-size: 1.2rem;
+    }
+    #restart {
+        padding: 5px;
+    }
+
+    #next {
+        padding: 5px;
+    }
+
+    #previous {
+        padding: 5px;
+    }
+    #submit {
+        padding: 5px;
     }
 }
 
